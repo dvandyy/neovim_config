@@ -1,0 +1,22 @@
+vim.opt.relativenumber = true
+vim.opt.nu = true
+
+vim.opt.smartindent = true
+vim.opt.termguicolors = true
+vim.opt.hidden = true
+vim.opt.incsearch = true
+vim.opt.hlsearch = false
+vim.opt.cursorline = true
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 0
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.smarttab = true
+vim.opt.encoding = 'utf8'
+vim.opt.laststatus = 2
+vim.opt.scrolloff = 10
+vim.opt.mouse = 'a'
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.wrap = false
