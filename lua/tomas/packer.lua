@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('theprimeagen/harpoon')
   use('tpope/vim-fugitive')
+  use('lewis6991/gitsigns.nvim')
   use('tpope/vim-commentary')
   use('windwp/nvim-autopairs')
 
