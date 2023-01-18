@@ -8,6 +8,6 @@ require('telescope').setup({
   },
 })
 
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fe', builtin.git_files, {})
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>fe', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
