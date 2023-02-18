@@ -7,10 +7,10 @@ return require('packer').startup(function(use)
   }
 
   use({
-    'catppuccin/nvim',
+    'sainnhe/sonokai',
     as = 'catppuccin',
     config = function()
-      vim.cmd('colorscheme catppuccin-frappe')
+      vim.cmd('colorscheme sonokai')
     end
   })
 

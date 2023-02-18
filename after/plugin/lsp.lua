@@ -6,11 +6,12 @@ lsp.preset('recommended')
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'sumneko_lua',
+  'lua_ls',
   'pyright',
   'volar',
   'cssls',
-  'gopls'
+  'gopls',
+  'rust_analyzer'
 })
 
 local cmp = require('cmp')
