@@ -11,7 +11,9 @@ lsp.ensure_installed({
   'volar',
   'cssls',
   'gopls',
-  'rust_analyzer'
+  'rust_analyzer',
+  'clangd',
+  'dockerls'
 })
 
 local cmp = require('cmp')

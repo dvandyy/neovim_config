@@ -1,4 +1,4 @@
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.nu = true
 
 vim.opt.smartindent = true
