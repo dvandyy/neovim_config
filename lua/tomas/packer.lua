@@ -22,9 +22,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-commentary')
   use('windwp/nvim-autopairs')
 
-  use {
-    'nvim-lualine/lualine.nvim',
-  }
+  use {'nvim-lualine/lualine.nvim'}
 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -33,6 +31,8 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly'
   }
+
+  use('jose-elias-alvarez/null-ls.nvim')
 
   use {
     'VonHeikemen/lsp-zero.nvim',

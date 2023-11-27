@@ -82,7 +82,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set('n', '<leader>h', function() vim.lsp.buf.signature_help() end, opts)
 
   vim.keymap.set('n', '<leader>fa', function()
-    vim.lsp.buf.format({ async = true })
+    vim.lsp.buf.format({ async = true, bufnr = bufnr })
   end)
 end)
 

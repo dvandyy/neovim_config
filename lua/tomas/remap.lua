@@ -7,6 +7,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('v', '<C-c>', '"*y')
+vim.keymap.set('n', '<leader>fv', ':Ex<CR>')
 
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
