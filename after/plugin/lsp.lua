@@ -4,19 +4,19 @@ local cmp = require("cmp")
 local mason = require("mason")
 local mason_config = require("mason-lspconfig")
 
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 mason.setup()
 mason_config.setup({
 	ensure_installed = {
 		"tsserver",
-		"eslint",
 		"lua_ls",
 		"pyright",
-		"volar",
 		"cssls",
 		"gopls",
 		"rust_analyzer",
 		"clangd",
-		"dockerls",
 	},
 })
 
@@ -24,10 +24,7 @@ cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-			require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
-			-- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+			require("luasnip").lsp_expand(args.body)
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
@@ -56,10 +53,7 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		-- { name = 'vsnip' }, -- For vsnip users.
-		{ name = "luasnip" }, -- For luasnip users.
-		-- { name = 'ultisnips' }, -- For ultisnips users.
-		-- { name = 'snippy' }, -- For snippy users.
+		{ name = "luasnip" },
 	}, {
 		{ name = "buffer" },
 	}),
@@ -70,9 +64,6 @@ cmp.setup({
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 	callback = function(ev)
-		-- Enable completion triggered by <c-x><c-o>
-		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
-
 		vim.keymap.set("n", "gd", function()
 			vim.lsp.buf.definition()
 		end, opts)
@@ -109,3 +100,19 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end)
 	end,
 })
+
+-- LSP Servers
+-- If we need some additional settings set it here
+lsp.lua_ls.setup({})
+
+lsp.tsserver.setup({})
+
+lsp.pyright.setup({})
+
+lsp.cssls.setup({})
+
+lsp.gopls.setup({})
+
+lsp.rust_analyzer.setup({})
+
+lsp.clangd.setup({})
