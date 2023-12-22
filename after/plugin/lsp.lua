@@ -13,7 +13,6 @@ mason_config.setup({
 		"tsserver",
 		"lua_ls",
 		"pyright",
-		"cssls",
 		"gopls",
 		"rust_analyzer",
 		"clangd",
@@ -30,7 +29,7 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
 		["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-		["<C-y>"] = cmp.mapping.confirm({ select = true }),
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<Tab>"] = function(fallback)
 			if cmp.visible() then
@@ -103,16 +102,30 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- LSP Servers
 -- If we need some additional settings set it here
-lsp.lua_ls.setup({})
+lsp.lua_ls.setup({
+	capabilities = capabilities,
+})
 
-lsp.tsserver.setup({})
+lsp.tsserver.setup({
+	capabilities = capabilities,
+})
 
-lsp.pyright.setup({})
+lsp.pyright.setup({
+	capabilities = capabilities,
+})
 
-lsp.cssls.setup({})
+lsp.cssls.setup({
+	capabilities = capabilities,
+})
 
-lsp.gopls.setup({})
+lsp.gopls.setup({
+	capabilities = capabilities,
+})
 
-lsp.rust_analyzer.setup({})
+lsp.rust_analyzer.setup({
+	capabilities = capabilities,
+})
 
-lsp.clangd.setup({})
+lsp.clangd.setup({
+	capabilities = capabilities,
+})
