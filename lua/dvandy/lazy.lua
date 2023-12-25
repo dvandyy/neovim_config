@@ -34,7 +34,6 @@ local plugins = {
 	"tpope/vim-commentary",
 	"windwp/nvim-autopairs",
 	"nvim-lualine/lualine.nvim",
-	"jose-elias-alvarez/null-ls.nvim",
 	{
 		-- LSP Support
 		"neovim/nvim-lspconfig",
