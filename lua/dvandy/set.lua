@@ -9,6 +9,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
 vim.opt.smarttab = false
 
+
 -- Other
 vim.opt.termguicolors = true
 vim.opt.hidden = true
@@ -21,5 +22,5 @@ vim.opt.scrolloff = 10
 vim.opt.mouse = "a"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.wrap = false
-
+vim.opt.wrap = false 
+vim.opt.completeopt = noselect
