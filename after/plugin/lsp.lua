@@ -117,10 +117,6 @@ lsp.pyright.setup({
 	capabilities = capabilities,
 })
 
-lsp.cssls.setup({
-	capabilities = capabilities,
-})
-
 lsp.gopls.setup({
 	capabilities = capabilities,
 })
