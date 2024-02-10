@@ -11,15 +11,18 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	-- Telescope
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.4",
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
 
+	-- Colorscheme
 	{
 		"folke/tokyonight.nvim",
 		config = function()
@@ -27,13 +30,12 @@ local plugins = {
 		end,
 	},
 
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"theprimeagen/harpoon",
-	"tpope/vim-fugitive",
-	"lewis6991/gitsigns.nvim",
-	"tpope/vim-commentary",
-	"windwp/nvim-autopairs",
-	"nvim-lualine/lualine.nvim",
+	-- Treesitter
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate"
+	},
+
 	{
 		-- LSP Support
 		"neovim/nvim-lspconfig",
@@ -53,6 +55,16 @@ local plugins = {
 		"rafamadriz/friendly-snippets",
 		"saadparwaiz1/cmp_luasnip",
 	},
+
+	-- Git
+	"tpope/vim-fugitive",
+	"lewis6991/gitsigns.nvim",
+
+	-- Other
+	"theprimeagen/harpoon",
+	"tpope/vim-commentary",
+	"windwp/nvim-autopairs",
+	"nvim-lualine/lualine.nvim",
 }
 
 local opts = {}

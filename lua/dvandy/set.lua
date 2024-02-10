@@ -11,6 +11,7 @@ vim.opt.smarttab = false
 
 
 -- Other
+vim.opt.background = "dark"
 vim.opt.termguicolors = true
 vim.opt.hidden = true
 vim.opt.incsearch = true
