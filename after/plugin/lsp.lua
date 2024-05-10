@@ -16,6 +16,8 @@ mason_config.setup({
 		"gopls",
 		"rust_analyzer",
 		"clangd",
+		"zls",
+		"astro"
 	},
 })
 
@@ -130,5 +132,9 @@ lsp.rust_analyzer.setup({
 })
 
 lsp.clangd.setup({
+	capabilities = capabilities,
+})
+
+lsp.astro.setup({
 	capabilities = capabilities,
 })

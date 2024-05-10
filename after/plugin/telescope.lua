@@ -11,6 +11,9 @@ require("telescope").setup({
 		find_files = {
 			find_command = { "rg", "--files", "--hidden", "-g", "!.git" },
 			previewer = false,
+			file_ignore_patterns = {
+				"node_modules"
+			}
 		},
 		git_files = {
 			previewer = false,
