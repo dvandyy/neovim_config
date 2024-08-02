@@ -17,7 +17,8 @@ mason_config.setup({
 		"rust_analyzer",
 		"clangd",
 		"zls",
-		"astro"
+		"astro",
+		"emmet_language_server"
 	},
 })
 
@@ -136,5 +137,9 @@ lsp.clangd.setup({
 })
 
 lsp.astro.setup({
+	capabilities = capabilities,
+})
+
+lsp.emmet_language_server.setup({
 	capabilities = capabilities,
 })
