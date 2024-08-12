@@ -30,7 +30,6 @@ local plugins = {
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	"theprimeagen/harpoon",
 	"tpope/vim-fugitive",
-	"xiyaowong/transparent.nvim",
 	"lewis6991/gitsigns.nvim",
 	"tpope/vim-commentary",
 	"windwp/nvim-autopairs",
