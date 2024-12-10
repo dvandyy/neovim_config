@@ -10,19 +10,18 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 mason.setup()
 mason_config.setup({
 	ensure_installed = {
-		"tsserver",
+		"ts_ls",
 		"lua_ls",
 		"pyright",
 		"gopls",
 		"rust_analyzer",
 		"clangd",
 		"zls",
-		"astro",
 		"emmet_language_server"
 	},
 })
 
-local types = require'cmp.types'
+local types = require 'cmp.types'
 
 cmp.setup({
 	preselect = types.cmp.PreselectMode.None,
@@ -112,15 +111,11 @@ lsp.lua_ls.setup({
 	capabilities = capabilities,
 })
 
-lsp.tsserver.setup({
+lsp.ts_ls.setup({
 	capabilities = capabilities,
 })
 
 lsp.pyright.setup({
-	capabilities = capabilities,
-})
-
-lsp.cssls.setup({
 	capabilities = capabilities,
 })
 
@@ -133,10 +128,6 @@ lsp.rust_analyzer.setup({
 })
 
 lsp.clangd.setup({
-	capabilities = capabilities,
-})
-
-lsp.astro.setup({
 	capabilities = capabilities,
 })
 

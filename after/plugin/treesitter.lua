@@ -1,6 +1,6 @@
 require("nvim-treesitter.configs").setup({
 	-- A list of parser names, or 'all'
-	ensure_installed = { "javascript", "typescript", "python", "vue", "css", "html", "dockerfile", "rust" },
+	ensure_installed = { "javascript", "typescript", "python", "dockerfile", "rust" },
 
 	sync_install = false,
 	auto_install = true,

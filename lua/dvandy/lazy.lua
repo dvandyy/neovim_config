@@ -23,12 +23,19 @@ local plugins = {
 	{
 		"catppuccin/nvim",
 		config = function()
+			require('catppuccin').setup({
+				transparent_background = true
+			})
 			vim.cmd("colorscheme catppuccin-frappe")
 		end,
 	},
 
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"theprimeagen/harpoon",
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" }
+	},
 	"tpope/vim-fugitive",
 	"lewis6991/gitsigns.nvim",
 	"tpope/vim-commentary",
