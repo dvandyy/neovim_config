@@ -13,7 +13,6 @@ mason_config.setup({
 		"ts_ls",
 		"lua_ls",
 		"pyright",
-		"gopls",
 		"rust_analyzer",
 		"clangd",
 		"zls",
@@ -116,10 +115,6 @@ lsp.ts_ls.setup({
 })
 
 lsp.pyright.setup({
-	capabilities = capabilities,
-})
-
-lsp.gopls.setup({
 	capabilities = capabilities,
 })
 
