@@ -9,6 +9,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 mason.setup()
 mason_config.setup({
+    automatic_enable = false,
 	ensure_installed = {
 		"ts_ls",
 		"lua_ls",
